@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student crud 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color:darksalmon;
+        }
+
+        h1 {
+
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        span{
+            color: red;
+        }
+        .bgColor{
+            background-color: mediumturquoise;
+        }
+        .cardBodyBg{
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid mt-5">
+        <h1>Student Information</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="card">
+                    <div class="card-header text-center bgColor">
+                        Student Form
+                    </div>
+                    <div class="card-body cardBodyBg">
+                        <form id="stdForm">
+                            <div class="form-group">                                
+                                <input required type="text" class="form-control" id="fname" placeholder="Enter First Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input required type="text" class="form-control" id="lname" placeholder="Enter Last Name">
+                            </div>
+                            <div class="form-group">
+                                <input required type="text" class="form-control" id="contact" placeholder="Enter Contact Number">
+                            </div>
+                            <div class="form-group">
+                                <input required type="text" class="form-control" id="email" placeholder="Enter Email Id">
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-block btn-primary" id="addStdBtn"> Add
+                                Student</button>
+                            <button type="button" class="btn btn-sm btn-block btn-danger d-none" id="updateStdBtn"> Update
+                                Student</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                    <tr>
+                        <th>Sr.no</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Contact No</th>
+                        <th>Email ID</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                    <tbody id="stdList">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Jhon</td>
+                            <td>Doe</td>
+                            <td>9999999999</td>
+                            <td>jhondoe@gmail.com</td>
+                            <td><i class="fa-solid fa-pen-to-square fa-2x text-primary" role="button"></i></td>
+                            <td><i class="fa-solid fa-trash-can fa-2x text-danger" role="button"></i></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
